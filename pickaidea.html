@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Ideas</title>
+    <link rel="stylesheet" href="pickform.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    html {
+        background-color: #fff;
+    }
+
+    .main {
+        justify-content: center;
+        background: rgb(255, 255, 255);
+        backdrop-filter: blur(40px);
+        display: flex;
+    }
+
+    .main img {
+        align-content: center;
+        margin-top: 80px;
+        width: 40%;
+        border-radius: 20px;
+    }
+
+    #pick-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 50px 50px;
+    }
+
+    input,
+    textarea {
+        padding: 5px 5px;
+        margin: 20px 5px;
+        border: 0;
+        border-bottom: 2px #ffba43 solid;
+    }
+
+    input:focus,
+    textarea:focus {
+        border: 0;
+        outline: 0;
+        border-bottom: 3px #ff8543 solid;
+    }
+
+    h1 {
+        padding-top: 25px;
+        text-align: center;
+        font-size: 25px;
+        color: #ff8543;
+    }
+
+    textarea::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    textarea::-webkit-scrollbar-track {
+        background-color: #ffa666;
+        border-radius: 50px;
+    }
+
+    textarea::-webkit-scrollbar-thumb {
+        cursor: pointer;
+        background-color: #ffffff;
+        border-radius: 50px;
+    }
+
+    @media (max-width:768px) {
+        .main img {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <div id="loader"></div>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hidesidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960"
+                    width="40px" fill="#DA954B">
+                    <path
+                        d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z" />
+                </svg></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ideas.html">StartUp Ideas</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="suggestion.html">Suggestion Form</a></li>
+            <li><a href="https://startup.bihar.gov.in/" target="_blank">StartUp Bihar</a></li>
+            <script>
+                function toggleSidebar() {
+                    var sidebar = document.querySelector('.sidebar');
+                    if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+                        sidebar.style.display = 'block';
+                    } else {
+                        sidebar.style.display = 'none';
+                    }
+                }
+
+                function hidesidebar() {
+                    document.querySelector('.sidebar').style.display = 'none';
+                }
+
+                document.addEventListener('click', function (event) {
+                    var sidebar = document.querySelector('.sidebar');
+                    var isClickInsideSidebar = sidebar.contains(event.target);
+                    var isClickOnNavIcon = document.querySelector('.nav-icon').contains(event.target);
+
+                    if (!isClickInsideSidebar && !isClickOnNavIcon) {
+                        sidebar.style.display = 'none';
+                    }
+                });
+            </script>
+        </ul>
+        <ul>
+            <li>
+                <div class="nav-icon" onclick="toggleSidebar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                        fill="#DA954B">
+                        <path
+                            d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
+                    </svg>
+                </div>
+            <li>
+                <h2>StartUp Madhepura</h2>
+            </li>
+            <li class="hideonmobile"><a href="index.html">Home</a></li>
+            <li class="hideonmobile"><a href="ideas.html">Ideas</a></li>
+            <li class="hideonmobile"><a href="contactus.html">Contact Us</a></li>
+            <li class="hideonmobile"><a href="suggestion.html">Suggest An Idea</a></li>
+            <li class="hideonmobile"><a href="https://startup.bihar.gov.in/" target="_blank">StartUp Bihar</a></li>
+
+        </ul>
+    </nav>
+    <script>
+        function showsidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+            closecart();
+        }
+        function hidesidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+
+    </script>
+    <h1>Yay! You are Best</h1>
+    <div class="main">
+        <form action="https://api.web3forms.com/submit" method="POST" id="pick-form">
+            <input type="hidden" name="access_key" value="7e01bf55-f188-48fc-9882-d6c8e0ea5e00">
+            <input type="hidden" name="redirect" value="https://nebulacoders.in/success.html">
+            <input type="hidden" name="subject" value="Someone Subscribed Your Newsletter">
+            <input type="text" name="Idea" placeholder="Idea Picked" id="idea-put">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <input type="text" name="Phone" placeholder="Your Phone" required>
+            <input type="text" name="College Name" placeholder="College Name(if any)">
+            <input type="text" name="Address" placeholder="Address" required>
+            <textarea type="message" name="Description" placeholder="Describe Your Thought on the idea you picked up" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <img src="15.jpg" alt="" width="400" height="500">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputField = document.getElementById('idea-put');
+
+            // Retrieve the stored data from local storage
+            const savedData = localStorage.getItem('savedIdeas');
+
+            // If there is saved data, prefill the input field
+            if (savedData) {
+                inputField.value = savedData;
+                //inputField.disabled = 'true';
+            }
+        });
+
+    </script>
+
+</body>
+<footer>
+    <div class="row">
+        <div class="col">
+            <h2>StartUp Madhepura <div class="underline"><span></span></div>
+            </h2>
+            <h3>Pick Your Ideas For StartUp</h3>
+            <br>
+            <h3>Address</h3>
+            <p>B. P. Mandal College Of Engineering </p>
+            <p>At Majarhat, Madhepura - 852128</p>
+            <p>Bihar, India</p>
+        </div>
+        <div class="col">
+            <h2>Links<div class="underline"><span></span></div>
+            </h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ideas.html">Ideas</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="suggestion.html">Suggest Ideas</a></li>
+                <li><a href="https://startup.bihar.gov.in/">Startup Bihar Official</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h2>Subscribe Our Newsletter<div class="underline"><span></span></div>
+            </h2>
+            <form action="https://api.web3forms.com/submit" method="POST" class="newsletterform">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="30" width="30">
+                    <path
+                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                </svg>
+                <input type="hidden" name="access_key" value="fa4cf571-40bd-4b91-a1bf-ce13f11a4c46">
+                <input type="hidden" name="redirect" value="https://nebulacoders.in/success.html">
+                <input type="hidden" name="subject" value="Someone Subscribed Your Newsletter">
+                <input type="email" name="email" placeholder="Enter Your email id" id="emailfield" required>
+                <button type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="30" width="30">
+                        <path
+                            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                    </svg>
+                </button>
+            </form>
+            <div class="socialicon">
+                <a href="https://whatsapp.com/channel/0029VabBpQ0F1YlOpPttv23J" target="_blank"><i
+                        class="fa fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/nebulacoders/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="mailto:nebulacodersbpmce+web@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.youtube.com/@NebulaCoders2024" target="_blank"> <i
+                        class="fa fa-youtube-play"></i></a>
+            </div>
+        </div>
+        <div class="col">
+            <h2>Map<div class="underline"><span></span></div>
+            </h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d459864.3004499553!2d86.54079201814075!3d25.78080606609644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ee36d3941d928b%3A0xc6c5a27d5739af9d!2sMadhepura%2C%20Bihar!5e0!3m2!1sen!2sin!4v1717402340555!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">StartUp Madhepura © 2024 - All Rights Reserved <br>Designed and Maintained By Nebula Coders
+    </p>
+</footer>
+<script>
+    var loader = document.getElementById("loader");
+    window.addEventListener("load", function () {
+        loader.style.display = "none";
+    })
+</script>
+
+</html>

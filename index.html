@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div id="loader"></div>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hidesidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#DA954B"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ideas.html">StartUp Ideas</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="suggestion.html">Suggestion Form</a></li>
+            <li><a href="https://startup.bihar.gov.in/" target="_blank">StartUp Bihar</a></li>
+            <script>
+                function toggleSidebar() {
+                    var sidebar = document.querySelector('.sidebar');
+                    if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+                        sidebar.style.display = 'block';
+                    } else {
+                        sidebar.style.display = 'none';
+                    }
+                }
+
+                function hidesidebar() {
+                    document.querySelector('.sidebar').style.display = 'none';
+                }
+
+                document.addEventListener('click', function (event) {
+                    var sidebar = document.querySelector('.sidebar');
+                    var isClickInsideSidebar = sidebar.contains(event.target);
+                    var isClickOnNavIcon = document.querySelector('.nav-icon').contains(event.target);
+
+                    if (!isClickInsideSidebar && !isClickOnNavIcon) {
+                        sidebar.style.display = 'none';
+                    }
+                });
+            </script>
+        </ul>
+        <ul>
+            <li>
+                <div class="nav-icon" onclick="toggleSidebar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#DA954B"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg>
+                </div>
+            <li>
+                <h2>StartUp Madhepura</h2>
+            </li>
+            <li class="hideonmobile"><a href="index.html">Home</a></li>
+            <li class="hideonmobile"><a href="ideas.html">Ideas</a></li>
+            <li class="hideonmobile"><a href="contactus.html">Contact Us</a></li>
+            <li class="hideonmobile"><a href="suggestion.html">Suggest An Idea</a></li>
+            <li class="hideonmobile"><a href="https://startup.bihar.gov.in/" target="_blank">StartUp Bihar</a></li>
+
+        </ul>
+    </nav>
+    <script>
+        function showsidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+            closecart();
+        }
+        function hidesidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+
+    </script>
+    <main>
+    </main>
+    <h1 style="text-align: center;">Our Collaborators</h1>
+    <div class="collabators">
+        <div class="box">
+            <img src="principal.jpg" alt="" />
+            <h1>Mr. Arbind Kumar Amar</h1>
+            <p>Principal-In-Charge ,BPMCE Madhepura</p>
+            <a href="mailto:singhmurlidhar@gmail.com" class="link"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#ECB576">
+                    <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                </svg></a>
+            <a href="telto:+919123254018" class="link"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#ECB576">
+                    <path
+                        d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
+                </svg></a>
+        </div>
+        <div class="box">
+            <img src="hod.jpg" alt="" />
+            <h1>Mr. Murlidhar Prasad Singh</h1>
+            <p>StartUp-Cell-In-Charge , Madhepura</p>
+            <a href="mailto:singhmurlidhar@gmail.com" class="link"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#ECB576">
+                    <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                </svg></a>
+            <a href="telto:+919074687528" class="link"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#ECB576">
+                    <path
+                        d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
+                </svg></a>
+        </div>
+        <div class="box">
+            <img src="gm.jpg" alt="" />
+            <h1>Shri. Harshvardhan Lal</h1>
+            <p>GM DIC, Madhepura</p>
+            <a href="mailto:singhmurlidhar@gmail.com" class="link"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#ECB576">
+                    <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                </svg></a>
+            <a href="telto:+919074687528" class="link"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#ECB576">
+                    <path
+                        d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
+                </svg></a>
+        </div>
+        <div class="box">
+            <img src="sh.jpg" alt="" />
+            <h1>Mr. Md. Sadique Azmi</h1>
+            <p>StartUp Cell District Coordinator, Madhepura</p>
+            <a href="mailto:singhmurlidhar@gmail.com" class="link"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#ECB576">
+                    <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                </svg></a>
+            <a href="telto:+919074687528" class="link"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#ECB576">
+                    <path
+                        d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
+                </svg></a>
+        </div>
+    </div>
+    <script>
+// Add this JavaScript to your script.js file or within a <script> tag in your HTML
+    window.addEventListener('DOMContentLoaded', (event) => {
+  const boxes = document.querySelectorAll('.box');
+  boxes.forEach((box, index) => {
+    setTimeout(() => {
+      box.classList.add('fly-in-bottom');
+    }, index * 200); // Stagger the animation by 200ms for each box
+  });
+});
+
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+<div class="container">
+    <div class="boxin">
+        <h1>Our Vision</h1>
+        <p>We main vision is to encourage our business and our beloved students for the startups in our district
+            Madhepura. For that We are here to support them at every level.
+            Every month we motivates and invites some founders from other startups from bihar to guide for students in
+            every possible way.
+            Bihar goverment provides the loan of 10 Lacs for the statup for interest free upto 10 years. In some cases
+            it get extended upto 75 lacs.
+            We are always ready to guide you and help you to build your startup under startup bihar scheme.
+        </p>
+    </div>
+</div>
+
+
+<h1 style="text-align: center;">Our Partners</h1>
+<div class="partners">
+    <div class="imgbox">
+        <img src="11.jpeg" alt="">
+    </div>
+    <div class="imgbox">
+        <img src="12.png" alt="">
+    </div>
+    <div class="imgbox">
+        <img src="13.jpeg" alt="">
+    </div>
+    <div class="imgbox">
+        <img src="14.jpeg" alt="">
+    </div>
+</div>
+
+<footer>
+    <div class="row">
+        <div class="col">
+            <h2>StartUp Madhepura <div class="underline"><span></span></div>
+            </h2>
+            <h3>Pick Your Ideas For StartUp</h3>
+            <br>
+            <h3>Address</h3>
+            <p>B. P. Mandal College Of Engineering </p>
+            <p>At Majarhat, Madhepura - 852128</p>
+            <p>Bihar, India</p>
+        </div>
+        <div class="col">
+            <h2>Links<div class="underline"><span></span></div>
+            </h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ideas.html">Ideas</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="suggestion.html">Suggest Ideas</a></li>
+                <li><a href="https://startup.bihar.gov.in/">Startup Bihar Official</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h2>Subscribe Our Newsletter<div class="underline"><span></span></div>
+            </h2>
+            <form action="https://api.web3forms.com/submit" method="POST" class="newsletterform">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="30" width="30">
+                    <path
+                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                </svg>
+                <input type="hidden" name="access_key" value="fa4cf571-40bd-4b91-a1bf-ce13f11a4c46">
+                <input type="hidden" name="redirect" value="https://nebulacoders.in/success.html">
+                <input type="hidden" name="subject" value="Someone Subscribed Your Newsletter">
+                <input type="email" name="email" placeholder="Enter Your email id" id="emailfield" required>
+                <button type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="30" width="30">
+                        <path
+                            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                    </svg>
+                </button>
+            </form>
+            <div class="socialicon">
+                <a href="https://whatsapp.com/channel/0029VabBpQ0F1YlOpPttv23J" target="_blank"><i
+                        class="fa fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/nebulacoders/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="mailto:nebulacodersbpmce+web@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.youtube.com/@NebulaCoders2024" target="_blank"> <i
+                        class="fa fa-youtube-play"></i></a>
+            </div>
+        </div>
+        <div class="col">
+            <h2>Map<div class="underline"><span></span></div>
+            </h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d459864.3004499553!2d86.54079201814075!3d25.78080606609644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ee36d3941d928b%3A0xc6c5a27d5739af9d!2sMadhepura%2C%20Bihar!5e0!3m2!1sen!2sin!4v1717402340555!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">StartUp Madhepura © 2024 - All Rights Reserved <br>Designed and Maintained By Nebula Coders
+    </p>
+</footer>
+<script>
+    var loader=document.getElementById("loader");
+    window.addEventListener("load",function()
+{
+    loader.style.display="none";
+})
+</script>
+</html>
